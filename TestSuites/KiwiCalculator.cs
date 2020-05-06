@@ -28,7 +28,12 @@ namespace WestpacTestAutomation
         [Test]
         public void NewTest()
         {
-            Console.WriteLine("doggo");
+            TopNavigationBar topNavigationBarObject = new TopNavigationBar(_browser);
+            topNavigationBarObject.HoverKiwiSaverOption();
+            topNavigationBarObject.ClickKiwiSaverCalculatorButton();
+
+            KiwiSaverCalculatorLanding kiwiSaverCalculatorLandingObject = new KiwiSaverCalculatorLanding(_browser);
+            kiwiSaverCalculatorLandingObject.ClickGetStartedButton();
         }
 
 
