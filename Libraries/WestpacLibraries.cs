@@ -1,4 +1,4 @@
-﻿namespace WestpacTestAutomation.Library
+﻿namespace WestpacTestAutomation.Libraries
 {
     class WestpacLibraries
     {

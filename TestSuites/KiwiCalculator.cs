@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using System;
 using System.Configuration;
-using WestpacTestAutomation.Library;
+using System.Threading;
+using WestpacTestAutomation.Libraries;
 using WestpacTestAutomation.Pages;
 
 namespace WestpacTestAutomation
@@ -34,6 +34,10 @@ namespace WestpacTestAutomation
 
             KiwiSaverCalculatorLanding kiwiSaverCalculatorLandingObject = new KiwiSaverCalculatorLanding(_browser);
             kiwiSaverCalculatorLandingObject.ClickGetStartedButton();
+
+            KiwiSaverRetirementCalculator kiwiSaverRetirementCalculatorObject = new KiwiSaverRetirementCalculator(_browser);
+            kiwiSaverRetirementCalculatorObject.ClickCurrentAgeHelpButton();
+            kiwiSaverRetirementCalculatorObject.Validations().AgeHelpIsDisplayed("This calculator has an age limit of 64 years old as you need to be under the age of 65 to join KiwiSaver.");
         }
 
 

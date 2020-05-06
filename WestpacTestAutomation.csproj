@@ -53,9 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\WestpacLibraries.cs" />
+    <Compile Include="Libraries\WestpacLibraries.cs" />
     <Compile Include="Pages\KiwiSaverCalculatorLanding.cs" />
     <Compile Include="Pages\KiwiSaverCalculatorLandingMap.cs" />
+    <Compile Include="Pages\KiwiSaverRetirementCalculator.cs" />
+    <Compile Include="Pages\KiwiSaverRetirementCalculatorMap.cs" />
+    <Compile Include="Pages\KiwiSaverRetirementCalculatorValidator.cs" />
     <Compile Include="Pages\TopNavigationBar.cs" />
     <Compile Include="Pages\TopNavigationBarMap.cs" />
     <Compile Include="Pages\WestpacLanding.cs" />
