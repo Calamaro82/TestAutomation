@@ -1,5 +1,17 @@
 ﻿# Westpac Practical Assignment
 
+## Introduction
+
+This project was created as a response to the practical assignment received on May 6, 2020. It is made using the following technologies:
+
+* Selenium WebDriver 3.141.0
+* NUnit 3.12.0
+* NUnit ConsoleRunner 3.11.1
+* Selenium Firefox WebDriver 0.26.0
+
+I used the Page Object Model as the design pattern of the framework and Data Driven tests where it was possible.
+It consists of two test suites to test different scenarios for the KiwiSaver Retirement Calculator in Westpac's website.
+
 ## Usage
 
 ### Prerequisites
@@ -20,7 +32,7 @@ After all the packages have been downloaded, execute the following command to bu
 
 ### Configuration
 
-The user can configure the URL in which the tests are going to be executed through the **App.config** file. This file looks like this:
+The user can configure the URL in which the tests are going to be executed through the **app.config** file. This file looks like this:
 
 	<configuration>
 		<appSettings>
@@ -28,7 +40,7 @@ The user can configure the URL in which the tests are going to be executed throu
 		</appSettings>
 	</configuration>
 
-To modify the url of any environment change the attribute **value** for the desired environment. For example, to update the prod environment's URL we would modify its entry in the App.config file to make it look like this:
+To modify the url of any environment change the attribute **value** for the desired environment. For example, to update the prod environment's URL we would modify its entry in the **app.config** file to make it look like this:
 
 	<add key="prod" value="https://updatedUrl.com/" />
 
@@ -38,7 +50,7 @@ To add a new environment:
 * The new entry must follow the same pattern than the default entries.
 * The key attribute must be unique and in lower case.
 
-For example, to add a new environment called UAT the App.config file would look like this:
+For example, to add a new environment called UAT the **app.config** file would look like this:
 
 	<configuration>
 		<appSettings>
@@ -57,4 +69,4 @@ Optionally, the user can choose the environment in which the test suites are goi
 
 	packages\Nunit.ConsoleRunner.3.11.1\tools\nunit3-console.exe WestpacTestAutomation.csproj --params=env=<KEY>
 
-The valid values for the parameter environment correspond to the "keys" defined in the App.config file. If no environment is choosen, "prod" is used by default.
+The valid values for the parameter environment correspond to the **keys** defined in the **app.config** file. If no environment is choosen, **prod** is used by default.
