@@ -8,6 +8,7 @@ namespace WestpacTestAutomation.Pages
         private IWebDriver _browser;
         private KiwiSaverRetirementCalculatorMap _pageMap;
 
+
         public KiwiSaverRetirementCalculatorValidator(IWebDriver browser)
         {
             _browser = browser;
@@ -15,7 +16,7 @@ namespace WestpacTestAutomation.Pages
         }
 
 
-        public void AgeHelpIsDisplayed(string validationText)
+        public void AgeInfoMessageIs(string validationText)
         {
             _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
             Assert.AreEqual(validationText, _pageMap.CurrentAgeMessage.Text);

@@ -10,6 +10,7 @@ namespace WestpacTestAutomation.Pages
         private IWebDriver _browser;
         private TopNavigationBarMap _pageMap;
 
+
         public TopNavigationBar(IWebDriver browser)
         {
             _browser = browser;

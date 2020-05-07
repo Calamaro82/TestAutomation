@@ -7,6 +7,7 @@ namespace WestpacTestAutomation.Pages
         private IWebDriver _browser;
         private KiwiSaverCalculatorLandingMap _pageMap;
 
+
         public KiwiSaverCalculatorLanding(IWebDriver browser)
         {
             _browser = browser;

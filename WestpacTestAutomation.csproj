@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Flow\Navigation.cs" />
     <Compile Include="Libraries\WestpacLibraries.cs" />
     <Compile Include="Pages\KiwiSaverCalculatorLanding.cs" />
     <Compile Include="Pages\KiwiSaverCalculatorLandingMap.cs" />
@@ -67,8 +68,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TestSuites\KiwiCalculator.cs" />
+    <Compile Include="TestSuites\UserStory1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestSuites\UserStory2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

@@ -1,14 +1,13 @@
-﻿using NUnit.Framework.Constraints;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Threading;
 
 namespace WestpacTestAutomation.Pages
 {
     class KiwiSaverRetirementCalculatorMap
     {
         private IWebDriver _browser;
+
 
         public KiwiSaverRetirementCalculatorMap(IWebDriver browser)
         {

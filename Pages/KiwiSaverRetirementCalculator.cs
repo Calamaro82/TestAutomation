@@ -26,10 +26,16 @@ namespace WestpacTestAutomation.Pages
         public void ClickCurrentAgeHelpButton()
         {
             _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.CurrentAgeHelpButton);
+            _browser.SwitchTo().DefaultContent();
+        }
 
-            DefaultWait<IWebElement> wait = new DefaultWait<IWebElement>(_pageMap.CurrentAgeHelpButton);
+
+        private void ClickFrameElement(IWebElement frameElement)
+        {
+            DefaultWait<IWebElement> wait = new DefaultWait<IWebElement>(frameElement);
             wait.Timeout = TimeSpan.FromSeconds(4);
-            
+
             Func<IWebElement, bool> FrameElementClickable = new Func<IWebElement, bool>((IWebElement ele) =>
             {
                 try
@@ -44,8 +50,6 @@ namespace WestpacTestAutomation.Pages
             });
 
             wait.Until(FrameElementClickable);
-
-            _browser.SwitchTo().DefaultContent();
         }
     }
 }
