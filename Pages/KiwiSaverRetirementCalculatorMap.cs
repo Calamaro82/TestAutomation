@@ -33,6 +33,39 @@ namespace WestpacTestAutomation.Pages
         }
 
 
+        public IWebElement VoluntaryContributionInput
+        {
+            get
+            {
+                return _browser.FindElement(By.XPath("//div[@help-id='VoluntaryContributions']//input"));
+            }
+        }
+
+
+        public IWebElement KiwiSaverBalanceInput
+        {
+            get
+            {
+                return _browser.FindElement(By.XPath("//div[@help-id='KiwiSaverBalance']//input"));
+            }
+        }
+
+
+        public IWebElement ContributionFrequencySelector
+        {
+            get
+            {
+                return _browser.FindElement(By.XPath("//div[@help-id='VoluntaryContributions']//div[@class='control-well'][@ng-click]"));
+            }
+        }
+
+
+        public IWebElement ContributionFrequencyOption(string contributionFrequencyOption)
+        {
+            return _browser.FindElement(By.XPath($"//div[@help-id='VoluntaryContributions']//span[text()='{contributionFrequencyOption}']"));
+        }
+
+
         public IWebElement EmploymentStatusSelector
         {
             get

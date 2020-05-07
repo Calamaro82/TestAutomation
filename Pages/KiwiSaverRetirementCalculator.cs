@@ -74,11 +74,38 @@ namespace WestpacTestAutomation.Pages
         }
 
 
+        public void SelectContributionFrequency(string contributionFrequency)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.ContributionFrequencySelector);
+            ClickFrameElement(_pageMap.ContributionFrequencyOption(contributionFrequency));
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
         public void InputSalaryPerYear(string salaryPerYearString)
         {
             _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
             ClickFrameElement(_pageMap.SalaryPerYearInput);
             _pageMap.SalaryPerYearInput.SendKeys(salaryPerYearString);
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+        public void InputCurrentBalance(string currentBalance)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.KiwiSaverBalanceInput);
+            _pageMap.KiwiSaverBalanceInput.SendKeys(currentBalance);
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+        public void InputVoluntaryContribution(string voluntaryContribution)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.VoluntaryContributionInput);
+            _pageMap.VoluntaryContributionInput.SendKeys(voluntaryContribution);
             _browser.SwitchTo().DefaultContent();
         }
 

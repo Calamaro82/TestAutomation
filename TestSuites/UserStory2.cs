@@ -42,6 +42,26 @@ namespace WestpacTestAutomation.TestSuites
         }
 
 
+        [TestCase("45", "Self-employed", "10.5%", "290000", "90", "Fortnightly", "Medium")]
+        [TestCase("55", "Not employed", "10.5%", "200000", "10", "Annually", "Medium")]
+        [Test]
+        public void Scenario2(string age, string employmentStatus, string PIR, string currentBalance, string voluntaryContribution, string contributionFrequency, string riskProfile)
+        {
+            Navigation.NavigateToKiwiSaverRetirementCalculator(_browser);
+
+            KiwiSaverRetirementCalculator kiwiSaverRetirementCalculatorObject = new KiwiSaverRetirementCalculator(_browser);
+            kiwiSaverRetirementCalculatorObject.InputCurrentAge(age);
+            kiwiSaverRetirementCalculatorObject.SelectEmploymentStatus(employmentStatus);
+            kiwiSaverRetirementCalculatorObject.SelectPIR(PIR);
+            kiwiSaverRetirementCalculatorObject.InputCurrentBalance(currentBalance);
+            kiwiSaverRetirementCalculatorObject.InputVoluntaryContribution(voluntaryContribution);
+            kiwiSaverRetirementCalculatorObject.SelectContributionFrequency(contributionFrequency);
+            kiwiSaverRetirementCalculatorObject.SelectRiskProfile(riskProfile);
+
+            kiwiSaverRetirementCalculatorObject.Validations().ViewProjectionsButtonIsEnabled();
+        }
+
+
         [TearDown]
         public void TearDown()
         {
