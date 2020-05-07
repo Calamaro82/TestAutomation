@@ -62,7 +62,7 @@ namespace WestpacTestAutomation.Pages
 
         public IWebElement ContributionFrequencyOption(string contributionFrequencyOption)
         {
-            return _browser.FindElement(By.XPath($"//div[@help-id='VoluntaryContributions']//span[text()='{contributionFrequencyOption}']"));
+            return _browser.FindElement(By.XPath(string.Format("//div[@help-id='VoluntaryContributions']//span[text()='{0}']", contributionFrequencyOption)));
         }
 
 
@@ -77,7 +77,7 @@ namespace WestpacTestAutomation.Pages
 
         public IWebElement EmploymentStatusOption(string employmentOption)
         {
-            return _browser.FindElement(By.XPath($"//div[@help-id='EmploymentStatus']//span[text()='{employmentOption}']"));
+            return _browser.FindElement(By.XPath(string.Format("//div[@help-id='EmploymentStatus']//span[text()='{0}']", employmentOption)));
         }
 
 
@@ -92,19 +92,19 @@ namespace WestpacTestAutomation.Pages
 
         public IWebElement PIROption(string PIR)
         {
-            return _browser.FindElement(By.XPath($"//div[@help-id='PIRRate']//span[text()='{PIR}']"));
+            return _browser.FindElement(By.XPath(string.Format("//div[@help-id='PIRRate']//span[text()='{0}']", PIR)));
         }
 
 
         public IWebElement KiwiSaverContributionRadioButton(string contributionOption)
         {
-            return _browser.FindElement(By.XPath($"//div[@help-id='KiwiSaverMemberContribution']//span[text()='{contributionOption}']"));
+            return _browser.FindElement(By.XPath(string.Format("//div[@help-id='KiwiSaverMemberContribution']//span[text()='{0}']", contributionOption)));
         }
 
 
         public IWebElement RiskProfile(string riskProfileOption)
         {
-            return _browser.FindElement(By.XPath($"//div[@help-id='RiskProfile']//span[text()='{riskProfileOption}']"));
+            return _browser.FindElement(By.XPath(string.Format("//div[@help-id='RiskProfile']//span[text()='{0}']", riskProfileOption)));
         }
 
 

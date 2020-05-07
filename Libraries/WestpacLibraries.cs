@@ -6,7 +6,7 @@
         {
             if (settingValue == null)
             {
-                throw new System.InvalidOperationException($"{settingName} doesn't exists in the App.config file");
+                throw new System.InvalidOperationException(string.Format("{0} doesn't exists in the App.config file", settingName));
             }
         }
     }
