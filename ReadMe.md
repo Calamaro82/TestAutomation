@@ -3,7 +3,9 @@
 ## Introduction
 
 This project was created as a response to the practical assignment received on May 6, 2020. 
+
 I used the Page Object Model as the design pattern of the framework and Data Driven tests where it was possible.
+
 It consists of two test suites to test different scenarios for the KiwiSaver Retirement Calculator in Westpac's website.
 
 ## Technologies
