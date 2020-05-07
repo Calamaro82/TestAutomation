@@ -2,15 +2,16 @@
 
 ## Introduction
 
-This project was created as a response to the practical assignment received on May 6, 2020. It is made using the following technologies:
+This project was created as a response to the practical assignment received on May 6, 2020. 
+I used the Page Object Model as the design pattern of the framework and Data Driven tests where it was possible.
+It consists of two test suites to test different scenarios for the KiwiSaver Retirement Calculator in Westpac's website.
+
+## Technologies
 
 * Selenium WebDriver 3.141.0
 * NUnit 3.12.0
 * NUnit ConsoleRunner 3.11.1
 * Selenium Firefox WebDriver 0.26.0
-
-I used the Page Object Model as the design pattern of the framework and Data Driven tests where it was possible.
-It consists of two test suites to test different scenarios for the KiwiSaver Retirement Calculator in Westpac's website.
 
 ## Usage
 
@@ -59,7 +60,7 @@ For example, to add a new environment called UAT the **app.config** file would l
 		</appSettings>
 	</configuration>
 
-### Usage
+### Execution
 
 To run the tests the user has to run the following command in the terminal from the test framework folder:
 
