@@ -144,5 +144,14 @@ namespace WestpacTestAutomation.Pages
                 return _browser.FindElement(By.XPath("//div[@help-id='CurrentAge']//div[@class='message-row ng-scope']/div/p"));
             }
         }
+
+
+        public IWebElement ResultsPanel
+        {
+            get
+            {
+                return _browser.FindElement(By.XPath("//div[@ng-show='ctrl.view.resultsPanelRevealed']"));
+            }
+        }
     }
 }

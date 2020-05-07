@@ -24,10 +24,10 @@ namespace WestpacTestAutomation.Pages
         }
 
 
-        public void ViewProjectionsButtonIsEnabled()
+        public void ProjectionResultIsVisible()
         {
             _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
-            Assert.IsTrue(_pageMap.ViewProjectionsButton.Enabled);
+            Assert.IsTrue(_pageMap.ResultsPanel.Displayed);
             _browser.SwitchTo().DefaultContent();
         }
     }

@@ -37,8 +37,9 @@ namespace WestpacTestAutomation.TestSuites
             kiwiSaverRetirementCalculatorObject.SelectKiwiSaverContribution("4%");
             kiwiSaverRetirementCalculatorObject.SelectPIR("17.5%");
             kiwiSaverRetirementCalculatorObject.SelectRiskProfile("High");
+            kiwiSaverRetirementCalculatorObject.ClickViewProjectionsButton();
 
-            kiwiSaverRetirementCalculatorObject.Validations().ViewProjectionsButtonIsEnabled();
+            kiwiSaverRetirementCalculatorObject.Validations().ProjectionResultIsVisible();
         }
 
 
@@ -58,7 +59,7 @@ namespace WestpacTestAutomation.TestSuites
             kiwiSaverRetirementCalculatorObject.SelectContributionFrequency(contributionFrequency);
             kiwiSaverRetirementCalculatorObject.SelectRiskProfile(riskProfile);
 
-            kiwiSaverRetirementCalculatorObject.Validations().ViewProjectionsButtonIsEnabled();
+            kiwiSaverRetirementCalculatorObject.Validations().ProjectionResultIsVisible();
         }
 
 

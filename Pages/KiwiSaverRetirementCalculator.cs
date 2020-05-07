@@ -23,6 +23,15 @@ namespace WestpacTestAutomation.Pages
         }
 
 
+        public void ClickViewProjectionsButton()
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.ViewProjectionsButton);
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+
         public void ClickCurrentAgeHelpButton()
         {
             _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
