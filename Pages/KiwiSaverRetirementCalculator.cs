@@ -31,6 +31,58 @@ namespace WestpacTestAutomation.Pages
         }
 
 
+        public void SelectKiwiSaverContribution(string contribution)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.KiwiSaverContributionRadioButton(contribution));
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+        public void SelectRiskProfile(string riskProfile)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.RiskProfile(riskProfile));
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+        public void InputCurrentAge(string ageString)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.CurrentAgeInput);
+            _pageMap.CurrentAgeInput.SendKeys(ageString);
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+        public void SelectPIR(string PIR)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.PIRSelector);
+            ClickFrameElement(_pageMap.PIROption(PIR));
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+        public void SelectEmploymentStatus(string employmentStatus)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.EmploymentStatusSelector);
+            ClickFrameElement(_pageMap.EmploymentStatusOption(employmentStatus));
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
+        public void InputSalaryPerYear(string salaryPerYearString)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.SalaryPerYearInput);
+            _pageMap.SalaryPerYearInput.SendKeys(salaryPerYearString);
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
         private void ClickFrameElement(IWebElement frameElement)
         {
             DefaultWait<IWebElement> wait = new DefaultWait<IWebElement>(frameElement);

@@ -22,5 +22,13 @@ namespace WestpacTestAutomation.Pages
             Assert.AreEqual(validationText, _pageMap.CurrentAgeMessage.Text);
             _browser.SwitchTo().DefaultContent();
         }
+
+
+        public void ViewProjectionsButtonIsEnabled()
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            Assert.IsTrue(_pageMap.ViewProjectionsButton.Enabled);
+            _browser.SwitchTo().DefaultContent();
+        }
     }
 }

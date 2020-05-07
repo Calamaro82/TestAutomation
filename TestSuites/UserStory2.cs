@@ -29,6 +29,16 @@ namespace WestpacTestAutomation.TestSuites
         public void Scenario1()
         {
             Navigation.NavigateToKiwiSaverRetirementCalculator(_browser);
+
+            KiwiSaverRetirementCalculator kiwiSaverRetirementCalculatorObject = new KiwiSaverRetirementCalculator(_browser);
+            kiwiSaverRetirementCalculatorObject.InputCurrentAge("30");
+            kiwiSaverRetirementCalculatorObject.SelectEmploymentStatus("Employed");
+            kiwiSaverRetirementCalculatorObject.InputSalaryPerYear("82000");
+            kiwiSaverRetirementCalculatorObject.SelectKiwiSaverContribution("4%");
+            kiwiSaverRetirementCalculatorObject.SelectPIR("17.5%");
+            kiwiSaverRetirementCalculatorObject.SelectRiskProfile("High");
+
+            kiwiSaverRetirementCalculatorObject.Validations().ViewProjectionsButtonIsEnabled();
         }
 
 
