@@ -1,7 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Threading;
 
 namespace WestpacTestAutomation.Pages
 {
@@ -28,8 +25,6 @@ namespace WestpacTestAutomation.Pages
         {
             get
             {
-                var wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(10));
-                wait.Until(brw => brw.FindElement(By.Id("ubermenu-item-cta-kiwisaver-calculators-ps")).Displayed);
                 return _browser.FindElement(By.Id("ubermenu-item-cta-kiwisaver-calculators-ps"));
             }
         }

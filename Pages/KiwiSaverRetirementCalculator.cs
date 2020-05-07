@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace WestpacTestAutomation.Pages
 {
@@ -24,7 +26,25 @@ namespace WestpacTestAutomation.Pages
         public void ClickCurrentAgeHelpButton()
         {
             _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
-            _pageMap.CurrentAgeHelpButton.Click();
+
+            DefaultWait<IWebElement> wait = new DefaultWait<IWebElement>(_pageMap.CurrentAgeHelpButton);
+            wait.Timeout = TimeSpan.FromSeconds(4);
+            
+            Func<IWebElement, bool> FrameElementClickable = new Func<IWebElement, bool>((IWebElement ele) =>
+            {
+                try
+                {
+                    ele.Click();
+                    return true;
+                }
+                catch (ElementClickInterceptedException e)
+                {
+                    return false;
+                }
+            });
+
+            wait.Until(FrameElementClickable);
+
             _browser.SwitchTo().DefaultContent();
         }
     }

@@ -20,9 +20,6 @@ namespace WestpacTestAutomation.Pages
         {
             get
             {
-                Thread.Sleep(1000);
-                var wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(10));
-                wait.Until(brw => brw.FindElement(By.XPath("//div[@help-id='CurrentAge']/button")).Displayed);
                 return _browser.FindElement(By.XPath("//div[@help-id='CurrentAge']/button"));
             }
         }
@@ -33,7 +30,7 @@ namespace WestpacTestAutomation.Pages
             get
             {
                 var wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(10));
-                wait.Until(brw => brw.FindElement(By.XPath("//div[@id='calculator-embed']/iframe")).Displayed);
+                wait.Until(brw => brw.FindElement(By.XPath("//div[@id='calculator-embed']/iframe")));
                 return _browser.FindElement(By.XPath("//div[@id='calculator-embed']/iframe"));
             }
         }

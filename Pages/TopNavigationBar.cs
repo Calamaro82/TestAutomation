@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace WestpacTestAutomation.Pages
 {
@@ -24,6 +26,8 @@ namespace WestpacTestAutomation.Pages
 
         public void ClickKiwiSaverCalculatorButton()
         {
+            var wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(10));
+            wait.Until(brw => _pageMap.KiwiSaverCalculatorButton.Displayed);
             _pageMap.KiwiSaverCalculatorButton.Click();
         }
     }
