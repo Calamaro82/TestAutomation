@@ -43,10 +43,10 @@ namespace WestpacTestAutomation.TestSuites
         }
 
 
-        [TestCase("45", "Self-employed", "10.5%", "290000", "90", "Fortnightly", "Medium")]
-        [TestCase("55", "Not employed", "10.5%", "200000", "10", "Annually", "Medium")]
+        [TestCase("45", "Self-employed", "10.5%", "100000", "90", "Fortnightly", "Medium", "290000")]
+        [TestCase("55", "Not employed", "10.5%", "140000", "10", "Annually", "Medium", "200000")]
         [Test]
-        public void Scenario2(string age, string employmentStatus, string PIR, string currentBalance, string voluntaryContribution, string contributionFrequency, string riskProfile)
+        public void Scenario2(string age, string employmentStatus, string PIR, string currentBalance, string voluntaryContribution, string contributionFrequency, string riskProfile, string goalRequirement)
         {
             Navigation.NavigateToKiwiSaverRetirementCalculator(_browser);
 
@@ -58,6 +58,8 @@ namespace WestpacTestAutomation.TestSuites
             kiwiSaverRetirementCalculatorObject.InputVoluntaryContribution(voluntaryContribution);
             kiwiSaverRetirementCalculatorObject.SelectContributionFrequency(contributionFrequency);
             kiwiSaverRetirementCalculatorObject.SelectRiskProfile(riskProfile);
+            kiwiSaverRetirementCalculatorObject.InputGoalRequirement(goalRequirement);
+            kiwiSaverRetirementCalculatorObject.ClickViewProjectionsButton();
 
             kiwiSaverRetirementCalculatorObject.Validations().ProjectionResultIsVisible();
         }

@@ -119,6 +119,15 @@ namespace WestpacTestAutomation.Pages
         }
 
 
+        public void InputGoalRequirement(string goalRequirement)
+        {
+            _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
+            ClickFrameElement(_pageMap.SavingsGoalInput);
+            _pageMap.SavingsGoalInput.SendKeys(goalRequirement);
+            _browser.SwitchTo().DefaultContent();
+        }
+
+
         private void ClickFrameElement(IWebElement frameElement)
         {
             DefaultWait<IWebElement> wait = new DefaultWait<IWebElement>(frameElement);

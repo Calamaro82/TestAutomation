@@ -24,6 +24,15 @@ namespace WestpacTestAutomation.Pages
         }
 
 
+        public IWebElement SavingsGoalInput
+        {
+            get
+            {
+                return _browser.FindElement(By.XPath("//div[@help-id='SavingsGoal']//input"));
+            }
+        }
+
+
         public IWebElement SalaryPerYearInput
         {
             get
@@ -146,11 +155,13 @@ namespace WestpacTestAutomation.Pages
         }
 
 
-        public IWebElement ResultsPanel
+        public IWebElement ResultsPanelTitle
         {
             get
             {
-                return _browser.FindElement(By.XPath("//div[@ng-show='ctrl.view.resultsPanelRevealed']"));
+                var wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(10));
+                wait.Until(brw => brw.FindElement(By.XPath("//div[@class='results-heading']")));
+                return _browser.FindElement(By.XPath("//div[@class='results-heading']"));
             }
         }
     }

@@ -27,7 +27,7 @@ namespace WestpacTestAutomation.Pages
         public void ProjectionResultIsVisible()
         {
             _browser.SwitchTo().Frame(_pageMap.CalculatorIFrame);
-            Assert.IsTrue(_pageMap.ResultsPanel.Displayed);
+            Assert.IsTrue(_pageMap.ResultsPanelTitle.Displayed);
             _browser.SwitchTo().DefaultContent();
         }
     }
