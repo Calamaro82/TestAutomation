@@ -20,6 +20,7 @@ I used the Page Object Model as the design pattern of the test automation framew
 * Nuget
 * Microsoft .NET Framework 4.7.2
 * Firefox
+* Build tools for Visual Studio 2019 or Visual Studio 2019
 
 ### Setup
 
