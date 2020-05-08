@@ -73,3 +73,11 @@ Optionally, the user can choose the environment in which the test suites are goi
 	packages\Nunit.ConsoleRunner.3.11.1\tools\nunit3-console.exe WestpacTestAutomation.csproj --params=env=<KEY>
 
 The valid values for the parameter environment correspond to the **keys** defined in the **app.config** file. If no environment is choosen, **prod** is used by default.
+
+### Reports
+
+The test results are saved in an xml file called **TestResult.xml** to ease their reading I included a tool that converts the xml file into an html report. To run it type:
+
+	extent -i <InputTestResultsFile> -o <outputFolderPath>
+
+This will read the results from **InputTestResultsFile** and write the html report in the **outputFolderPath**.
