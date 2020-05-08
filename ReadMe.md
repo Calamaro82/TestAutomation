@@ -4,9 +4,7 @@
 
 This project was created as a response to the practical assignment received on May 6, 2020. 
 
-I used the Page Object Model as the design pattern of the framework and Data Driven tests where it was possible.
-
-It consists of two test suites to test different scenarios for the KiwiSaver Retirement Calculator in Westpac's website.
+I used the Page Object Model as the design pattern of the test automation framework and Data Driven methodology where possible. Both methodologies where chosen because they reduce code duplication and increase its maintainability.
 
 ## Technologies
 
@@ -35,7 +33,7 @@ After all the packages have been downloaded, execute the following command to bu
 
 ### Configuration
 
-The user can configure the URL in which the tests are going to be executed through the **app.config** file. This file looks like this:
+Configure the URL in which the tests are going to be executed through the **app.config** file. The file looks like this:
 
 	<configuration>
 		<appSettings>
@@ -43,15 +41,15 @@ The user can configure the URL in which the tests are going to be executed throu
 		</appSettings>
 	</configuration>
 
-To modify the url of any environment change the attribute **value** for the desired environment. For example, to update the prod environment's URL we would modify its entry in the **app.config** file to make it look like this:
+To modify the URL of any environment, change the attribute **value** for the desired environment. For example, to update the prod environment's URL modify its entry in the **app.config** file to make it look like this:
 
 	<add key="prod" value="https://updatedUrl.com/" />
 
 To add a new environment:
 
 * Add a new entry inside the **appSetting** section of the file.
-* The new entry must follow the same pattern than the default entries.
-* The key attribute must be unique and in lower case.
+* The new entry must follow the same pattern as the default entries.
+* The **key** attribute must be unique and in lower case.
 
 For example, to add a new environment called UAT the **app.config** file would look like this:
 
@@ -64,11 +62,11 @@ For example, to add a new environment called UAT the **app.config** file would l
 
 ### Execution
 
-To run the tests the user has to run the following command in the terminal from the test framework folder:
+To run the tests execute the following command in the terminal from the test framework folder:
 
 	packages\Nunit.ConsoleRunner.3.11.1\tools\nunit3-console.exe WestpacTestAutomation.csproj
 
-Optionally, the user can choose the environment in which the test suites are going to be executed by adding the argument **--params=env=<KEY>** in the command line, like this:
+Additionally, the user can choose the environment in which the test suites are going to be executed by adding the argument **--params=env=<KEY>** in the command line, like this:
 
 	packages\Nunit.ConsoleRunner.3.11.1\tools\nunit3-console.exe WestpacTestAutomation.csproj --params=env=<KEY>
 
@@ -76,7 +74,7 @@ The valid values for the parameter environment correspond to the **keys** define
 
 ### Reports
 
-The test results are saved in an xml file called **TestResult.xml** to ease their reading I included a tool that converts the xml file into an html report. To run it type:
+By default, the test results are saved in an xml file called **TestResult.xml**. To make reading the test results easier the project includes a tool that converts the xml file into an html report. To generate the report type:
 
 	extent -i <InputTestResultsFile> -o <outputFolderPath>
 
