@@ -68,9 +68,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TestSuites\UserStory1.cs" />
+    <Compile Include="TestSuites\KiwiCalculatorInformationElements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestSuites\UserStory2.cs" />
+    <Compile Include="TestSuites\KiwiCalculatorProjectedBalance.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

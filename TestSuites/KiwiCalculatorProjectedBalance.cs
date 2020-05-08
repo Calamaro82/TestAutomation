@@ -8,7 +8,7 @@ using WestpacTestAutomation.Pages;
 
 namespace WestpacTestAutomation.TestSuites
 {
-    class UserStory2
+    class KiwiCalculatorProjectedBalance
     {
         IWebDriver _browser;
 
@@ -26,7 +26,7 @@ namespace WestpacTestAutomation.TestSuites
 
 
         [Test]
-        public void Scenario1()
+        public void ProjectionResultsForAnEmployedPersonAreDisplayed()
         {
             Navigation.NavigateToKiwiSaverRetirementCalculator(_browser);
 
@@ -46,7 +46,7 @@ namespace WestpacTestAutomation.TestSuites
         [TestCase("45", "Self-employed", "10.5%", "100000", "90", "Fortnightly", "Medium", "290000")]
         [TestCase("55", "Not employed", "10.5%", "140000", "10", "Annually", "Medium", "200000")]
         [Test]
-        public void Scenario2(string age, string employmentStatus, string PIR, string currentBalance, string voluntaryContribution, string contributionFrequency, string riskProfile, string goalRequirement)
+        public void ProjectionResultsForSelfAndNonEmployedPersonsAreDisplayed(string age, string employmentStatus, string PIR, string currentBalance, string voluntaryContribution, string contributionFrequency, string riskProfile, string goalRequirement)
         {
             Navigation.NavigateToKiwiSaverRetirementCalculator(_browser);
 

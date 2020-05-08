@@ -8,7 +8,7 @@ using WestpacTestAutomation.Flow;
 
 namespace WestpacTestAutomation
 {
-    class KiwiCalculator
+    class KiwiCalculatorInformationElements
     {
         IWebDriver _browser;
 
@@ -26,7 +26,7 @@ namespace WestpacTestAutomation
 
 
         [Test]
-        public void Scenario1()
+        public void AgeInformationText()
         {
             Navigation.NavigateToKiwiSaverRetirementCalculator(_browser);
 
